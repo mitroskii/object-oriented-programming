@@ -29,6 +29,11 @@ namespace TaskPerson
             this.Age++;
         }
 
+        public void GrowOld(int number)
+        {
+            this.Age = this.Age + number;
+        }
+
         public void PrintPersonInfo()
         {
             Console.WriteLine($"Nimi: {Name}\nIkä: {this.Age}\nAikuinen: {isAdult()}");
