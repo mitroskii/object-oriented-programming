@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kirjaluokka", "Kirjaluokka\Kirjaluokka.csproj", "{20324652-BC4B-4923-86D7-0BAE4B239B24}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskBook", "Kirjaluokka\TaskBook.csproj", "{20324652-BC4B-4923-86D7-0BAE4B239B24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

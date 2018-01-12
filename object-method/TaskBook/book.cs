@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Kirjaluokka
+namespace TaskBook
 {
-    class book
+    class Book
     {
         //Fields
         public string Title;
@@ -13,7 +13,7 @@ namespace Kirjaluokka
         public int Price;
 
         //Constructor
-        public book()
+        public Book()
         {
             Title = "unknow";
             Author = "unknow";
@@ -21,7 +21,7 @@ namespace Kirjaluokka
             Price = 0;
         }
 
-        public book(string title, string author, int id, int price)
+        public Book(string title, string author, int id, int price)
         {
             Title = title;
             Author = author;
@@ -38,20 +38,15 @@ namespace Kirjaluokka
                               $"Hinta: {Price}");
         }
 
-        public string CompareBook(book book)
+        public string CompareBook(Book newbook)
         {
-            if (this.Price > book.Price)
-                return ($"{this.Title} on kalliimpi kuin {book.Title} kirja");
-
-            else ()
-        }
-
-        
-
-
-
+            if (this.Price > newbook.Price)
+            
+                return ($"{this.Title} on kalliimpi kuin {newbook.Title} kirja");
+           
+                return ($"{newbook.Title} on kalliimpi kuin {this.Title} kirja");
+        } 
     }
-
 }
     
 
