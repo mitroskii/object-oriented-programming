@@ -8,15 +8,13 @@ namespace TaskCar
     {
         //Fields
         public string Brand;
-        public int Speed;
-        private int _brake;
+        public double Speed;
 
         //Constructor
         public Car()
         {
             Brand = "unknow";
             Speed = 0;
-            _brake = Speed;
         }
 
         public Car(string brand, int speed)
@@ -29,9 +27,9 @@ namespace TaskCar
         public void AskData()
         {
             Console.WriteLine($"Syötä auton merkki: ");
-            string Brand = Console.ReadLine();
+            Brand = Console.ReadLine();
             Console.WriteLine($"Syötä auton nopeus: ");
-            int Speed = int.Parse(Console.ReadLine());
+            Speed = int.Parse(Console.ReadLine());
         }
 
         public void ShowCarInfo()
@@ -41,12 +39,24 @@ namespace TaskCar
 
         public void Accelerate()
         {
+            Console.WriteLine("Lisää nopeutta km/h: ");
+            int speed = int.Parse(Console.ReadLine());
 
+            if (speed < 0)
+            {
+                Console.WriteLine("Negatiivinen muutos ei ole sallittu");
+            }
+            else
+            {
+                Console.WriteLine("Uusi nopeus:");
+                Speed += speed;
+            }
         }
 
         private void Brake()
         {
-
+            Console.WriteLine("Uusi nopeus:");
+            Speed = Speed - Speed * 0.1;
         }
     }
 }
