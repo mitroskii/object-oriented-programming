@@ -20,13 +20,6 @@ namespace TaskCompany
             company2.Profit(company2);
             Console.WriteLine();
 
-            Company company3 = new Company();
-            company3.AskData();
-            Console.WriteLine();
-            company3.ShowCompanyInfo();
-            company3.Profit(company3);
-            Console.WriteLine();
-
             Console.ReadKey();
         }
     }
