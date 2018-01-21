@@ -31,7 +31,6 @@ namespace TaskEmployee
         }
 
         //Methods
-       
         public void PrintEmployeeInfo(Employee employee)
         {
             if (employee.Id == 12345)
@@ -42,13 +41,14 @@ namespace TaskEmployee
             Console.WriteLine($"Nimi: {employee.Name}\n" +
                              $"Id: {employee.Id}\n" +
                              $"Tehtävä: {employee.Position}\n" +
-                             $"Palkka: {employee.Salary}");           
+                             $"Palkka: {employee.Salary }\n" +
+                             $"Boss, vertailtu palkka: {CompareSalary(employee)}");           
         }
-        public void CompareSalary(Employee employee)
+        public int CompareSalary(Employee employee)
         {
             int Comparison = 0;
-            Comparison = employee.Salary - Salary;
+            Comparison = employee.Salary -  NewSalary;
+            return Comparison;
         }
-
     }
 }
