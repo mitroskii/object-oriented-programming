@@ -11,7 +11,7 @@ namespace TaskEmployee
         public int Id;
         public string Position;
         public int Salary;
-        public int NewSalary = 0;
+        public static int NewSalary = 0;
 
         //Constructor
         public Employee()
