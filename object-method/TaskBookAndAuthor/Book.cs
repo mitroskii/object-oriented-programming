@@ -10,7 +10,7 @@ namespace TaskBookAndAuthor
         public string Title;
         public string Author;
         public string Publisher;
-        public int Price;
+        public double Price;
         public static string ThemeName;
 
         //Constructor
@@ -23,7 +23,7 @@ namespace TaskBookAndAuthor
             ThemeName = "Unknow";
         }
 
-        public Book(string title, string author, string publisher, int price, string themename)
+        public Book(string title, string author, string publisher, double price, string themename)
         {
             Title = title;
             Author = author;
@@ -52,6 +52,41 @@ namespace TaskBookAndAuthor
         public static void ChangeTheme(string Theme)
         {
             ThemeName = Theme;
+        }
+        public double NewPrice
+        {
+            get
+            {
+                return Price;
+            }
+
+            set
+            {
+                if (value > 30)
+                {
+                    Price = value * 0.9;
+                }
+                else
+                {
+                    Price = value;
+                }
+            }
+
+        }
+        public string AuthorValue
+        {
+            get
+            {
+                return Author;
+            }
+        }
+
+        public void PrintBookInfo()
+        {
+            Console.WriteLine($"Book name: {Title}\n" +
+                              $"Publisher: {Publisher}\n" +
+                              $"Price: {Price}\n" +
+                              $"Theme: {ThemeName}");
         }
     }
 }
