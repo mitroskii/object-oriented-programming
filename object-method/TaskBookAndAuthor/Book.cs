@@ -10,7 +10,7 @@ namespace TaskBookAndAuthor
         {
             //Fields
             public string Title;
-            public string Author;
+            public readonly string Author;
             public string Publisher;
             public double Price;
             public static string ThemeName;
@@ -40,7 +40,7 @@ namespace TaskBookAndAuthor
                 if (Title.Equals(title))
                 {
                     Console.WriteLine($"Name: {Title}\n" +
-                                      $"Writer: {Author}\n" +
+                                      $"Author: {Author}\n" +
                                       $"Publisher: {Publisher}\n" +
                                       $"Price: {Price:C}\n" +
                                       $"Theme: {ThemeName}");

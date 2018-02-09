@@ -23,7 +23,7 @@ namespace TaskBookAndAuthor
         //Methods
         public void PrintWriterInfo()
         {
-            Console.WriteLine($"Writer name: {Name}\n" +
+            Console.WriteLine($"Author name: {Name}\n" +
                               $"Birthday: {Birthday}");
             Book.GetBook("Viimeinen vartio");
         }
