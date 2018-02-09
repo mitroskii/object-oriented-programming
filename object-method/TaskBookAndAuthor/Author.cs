@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TaskBookAndAuthor.TaskLiterature;
 
 namespace TaskBookAndAuthor
 {
@@ -24,7 +25,7 @@ namespace TaskBookAndAuthor
         {
             Console.WriteLine($"Writer name: {Name}\n" +
                               $"Birthday: {Birthday}");
-            Book.GetBook("Kiirastuli");
+            Book.GetBook("Viimeinen vartio");
         }
     }
 }

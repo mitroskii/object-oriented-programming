@@ -4,89 +4,92 @@ using System.Text;
 
 namespace TaskBookAndAuthor
 {
-    class Book
+    namespace TaskLiterature
     {
-        //Fields
-        public string Title;
-        public string Author;
-        public string Publisher;
-        public double Price;
-        public static string ThemeName;
-
-        //Constructor
-        public Book()
+        class Book
         {
-            Title = "Unknow";
-            Author = "Unknow";
-            Publisher = "Unknown";
-            Price = 0;
-            ThemeName = "Unknow";
-        }
+            //Fields
+            public string Title;
+            public string Author;
+            public string Publisher;
+            public double Price;
+            public static string ThemeName;
 
-        public Book(string title, string author, string publisher, double price, string themename)
-        {
-            Title = title;
-            Author = author;
-            Publisher = publisher;
-            Price = price;
-            ThemeName = themename;
-        }
-
-        //Methods
-        public void GetBook(string title)
-        {
-            if (Title.Equals(title))
+            //Constructor
+            public Book()
             {
-                Console.WriteLine($"Name: {Title}\n" +
-                                  $"Writer: {Author}\n" +
-                                  $"Publisher: {Publisher}\n" +
-                                  $"Price: {Price:C}\n" +
-                                  $"Theme: {ThemeName}");
-            }
-            else
-            {
-                Console.WriteLine($"The Book {Title} wasn´t found.");
-            }
-        }
-
-        public static void ChangeTheme(string Theme)
-        {
-            ThemeName = Theme;
-        }
-        public double NewPrice
-        {
-            get
-            {
-                return Price;
+                Title = "Unknow";
+                Author = "Unknow";
+                Publisher = "Unknown";
+                Price = 0;
+                ThemeName = "Unknow";
             }
 
-            set
+            public Book(string title, string author, string publisher, double price, string themename)
             {
-                if (value > 30)
+                Title = title;
+                Author = author;
+                Publisher = publisher;
+                Price = price;
+                ThemeName = themename;
+            }
+
+            //Methods
+            public void GetBook(string title)
+            {
+                if (Title.Equals(title))
                 {
-                    Price = value * 0.9;
+                    Console.WriteLine($"Name: {Title}\n" +
+                                      $"Writer: {Author}\n" +
+                                      $"Publisher: {Publisher}\n" +
+                                      $"Price: {Price:C}\n" +
+                                      $"Theme: {ThemeName}");
                 }
                 else
                 {
-                    Price = value;
+                    Console.WriteLine($"The book {Title} wasn´t found.");
                 }
             }
 
-        }
-        public string AuthorValue
-        {
-            get
+            public static void ChangeTheme(string Theme)
             {
-                return Author;
+                ThemeName = Theme;
             }
-        }
+            public double NewPrice
+            {
+                get
+                {
+                    return Price;
+                }
 
-        public void PrintBookInfo()
-        {
-            Console.WriteLine($"Book name: {Title}\n" +
-                              $"Publisher: {Publisher}\n" +
-                              $"Price: {Price}\n" +
-                              $"Theme: {ThemeName}");
+                set
+                {
+                    if (value > 30)
+                    {
+                        Price = value * 0.9;
+                    }
+                    else
+                    {
+                        Price = value;
+                    }
+                }
+
+            }
+            public string AuthorValue
+            {
+                get
+                {
+                    return Author;
+                }
+            }
+
+            public void PrintBookInfo()
+            {
+                Console.WriteLine($"Book name: {Title}\n" +
+                                  $"Publisher: {Publisher}\n" +
+                                  $"Price: {Price}\n" +
+                                  $"Theme: {ThemeName}");
+            }
         }
     }
 }
